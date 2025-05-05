@@ -122,4 +122,3 @@ plt.xlabel('Is Canceled')
 plt.ylabel('Total Stay Duration (Nights)')
 plt.grid(True)
 plt.show()
-
