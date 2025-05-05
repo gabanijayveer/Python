@@ -1,0 +1,26 @@
+{
+    "user1": {
+        "pin": 1234,
+        "balance": 220000
+    },
+    "user2": {
+        "pin": 5678,
+        "balance": 150000
+    },
+    "user3": {
+        "pin": 9101,
+        "balance": 300000
+    },
+    "user4": {
+        "pin": 1121,
+        "balance": 50000
+    },
+    "user5": {
+        "pin": 3141,
+        "balance": 75000
+    },
+    "user6": {
+        "pin": 5161,
+        "balance": 120000
+    }
+}
