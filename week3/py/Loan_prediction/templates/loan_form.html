@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Prediction</title>
+</head>
+<body>
+    <h2>Loan Approval Prediction</h2>
+    <form method="POST" action="/predict">
+        Gender: <select name="gender"><option>Male</option><option>Female</option></select><br><br>
+        Married: <select name="married"><option>Yes</option><option>No</option></select><br><br>
+        Education: <select name="education"><option>Graduate</option><option>Not Graduate</option></select><br><br>
+        Income: <input type="number" name="income" required><br><br>
+        Credit History (1 = Good, 0 = Bad): <input type="number" name="credit_history" min="0" max="1" required><br><br>
+        Loan Amount: <input type="number" name="loan_amount" required><br><br>
+        Loan Term (in months): <input type="number" name="loan_term" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h3>{{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
