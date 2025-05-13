@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Risk Prediction</title>
+</head>
+<body>
+    <h2>Enter Test Results</h2>
+    <form method="POST" action="/predict">
+        <label>Fasting Blood Sugar (FBS):</label>
+        <input type="number" step="any" name="FBS" required><br><br>
+
+        <label>Oral Glucose Tolerance Test (OGTT):</label>
+        <input type="number" step="any" name="OGTT" required><br><br>
+
+        <label>HbA1c (%):</label>
+        <input type="number" step="any" name="HbA1c" required><br><br>
+
+        <label>Random Blood Sugar (RBS):</label>
+        <input type="number" step="any" name="RBS" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h3>{{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>

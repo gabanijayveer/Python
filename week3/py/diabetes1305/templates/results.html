@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction Results</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 6px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+    <h2>Top 500 Patient Predictions</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Fasting Glucose</th>
+                <th>OGTT</th>
+                <th>A1c</th>
+                <th>Random Sugar</th>
+                <th>BMI</th>
+                <th>Prediction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in results %}
+            <tr>
+                <td>{{ row.Name }}</td>
+                <td>{{ row.Fasting_Blood_Glucose }}</td>
+                <td>{{ row.OGTT_Result }}</td>
+                <td>{{ row.Hemoglobin_A1c }}</td>
+                <td>{{ row.Random_Blood_Sugar }}</td>
+                <td>{{ row.BMI }}</td>
+                <td>{{ row.Predicted_Diabetes_Status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
