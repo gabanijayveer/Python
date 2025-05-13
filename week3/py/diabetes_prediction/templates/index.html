@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Risk Prediction</title>
+</head>
+<body>
+    <h1>Diabetes Risk Prediction</h1>
+    <form action="/predict" method="post">
+        Fasting Blood Glucose: <input type="text" name="fasting_glucose"><br>
+        OGTT Result: <input type="text" name="ogtt"><br>
+        Hemoglobin A1c: <input type="text" name="hba1c"><br>
+        Random Blood Sugar: <input type="text" name="random_sugar"><br>
+        Blood Pressure (e.g. 130/85): <input type="text" name="blood_pressure"><br>
+        LDL: <input type="text" name="ldl"><br>
+        HDL: <input type="text" name="hdl"><br>
+        BMI: <input type="text" name="bmi"><br>
+        Medical Conditions:
+        <select name="medical_condition">
+            <option value="PCOS">PCOS</option>
+            <option value="High Blood Pressure">High Blood Pressure</option>
+        </select><br>
+        Gestational Diabetes:
+        <select name="gestational">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h2>{{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
