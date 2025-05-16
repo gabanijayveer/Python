@@ -84,4 +84,3 @@ print("\n📊 Classification Report:\n", classification_report(y_test, y_pred))
 # Save the best model to disk
 joblib.dump(grid_search.best_estimator_, 'best_telco_churn_model.pkl')
 print("\n💾 Model saved to 'best_telco_churn_model.pkl'")
-
