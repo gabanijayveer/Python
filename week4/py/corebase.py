@@ -29,8 +29,8 @@ class FeedforwardANN(nn.Module):
 
 
 # -----------------------------
-# Generate Dummy Data (Binary classification)
-# -----------------------------
+# Generate Dummy Data (Binary classification)  OR
+#  Training data-----------------------------
 def generate_data(samples=1000):
     X = torch.randn(samples, 4)
     y = (X.sum(dim=1) > 0).long()
