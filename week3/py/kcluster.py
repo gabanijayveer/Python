@@ -38,8 +38,6 @@ plt.ylabel("Distance")
 plt.show()
 
 # PCA clustering
-
-
 from sklearn.decomposition import PCA
 from sklearn.datasets import load_iris
 import matplotlib.pyplot as plt
